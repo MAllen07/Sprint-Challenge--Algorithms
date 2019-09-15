@@ -11,19 +11,9 @@ c) this algorithm has a runtime of 0(n)
 
 ## Exercise II
 
-# run time complexity defined:
+you can use  binary search, which is O(log n) 
+Step 1: find the midpoint of the building by dividing the total number of floors in half 
+Step 2: compare midpoint to f if equal return index of f if midpoint > f, f must be in left sub-array if midpoint < f, f must be in right sub-array
+Step 3: repeat on subsequent sub-arrays until midpoint == f
 
-# takes in the argument of word and then check the length of the word if it's equal to 0 or less then 2 it will return 0 that is the break statement
-# if it is more then 2 or 0 it will slice the word to look for the th in the array [0:2] ==‘th’ part. # if it finds the th in the string it will return the word with count if not it will return the word .
-
-
-
-def count_th(word):
-   word_leng = len(word)
-   if word_leng == 0 or word_leng < 2:
-       return 0
-   elif word[0:2] == “th”:
-       return count_th(word[1::]) + 1
-   else:
-       return count_th(word[1::])
 
